@@ -1,12 +1,16 @@
-var eggs = 'Feel the rhythm and the yucky yellow xylophone';
+var random = 'Feel the rhythm of the yucky yellow xylophone brah';
 
-function translator( string ) {
+function translator( input ) {
    var vowels = [ 'a', 'e', 'i', 'o', 'u', 'y' ];
    var pigLatin = [];
    //split string into an array of substrings (each word is a string)
-   var words = string.split( ' ' );
 
    console.log(words);
+   if ( typeof input !== 'string' ) {
+    throw new TypeError( "Input must be a string!" );
+
+   }
+   var words = input.split( ' ' );
 
    for ( var i = 0; i < words.length; i++ ) {
       //walk through the vowels and the string to find the first vowel
@@ -32,4 +36,4 @@ function translator( string ) {
     }
    return pigLatin.join(' ');
 }
-translator(eggs);
+translator( random );

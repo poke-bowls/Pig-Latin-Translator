@@ -1,7 +1,6 @@
 var expect = chai.expect;
 chai.should();
 
-
 describe( 'translator', function() {
   it( 'should exist', function() {
     expect(translator).to.exist;
